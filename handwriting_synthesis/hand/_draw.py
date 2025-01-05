@@ -4,9 +4,10 @@ import svgwrite
 from handwriting_synthesis import drawing
 
 
-def _draw(strokes, lines, filename, stroke_colors=None, stroke_widths=None):
+def _draw(strokes, lines, filename, stroke_colors=None, stroke_widths=None, alignments=None):
     stroke_colors = stroke_colors or ['black'] * len(lines)
     stroke_widths = stroke_widths or [2] * len(lines)
+    alignments = alignments or ['center'] * len(lines)
 
     line_height = 60
     view_width = 1000
@@ -17,7 +18,7 @@ def _draw(strokes, lines, filename, stroke_colors=None, stroke_widths=None):
     dwg.add(dwg.rect(insert=(0, 0), size=(view_width, view_height), fill='white'))
 
     initial_coord = np.array([0, -(3 * line_height / 4)])
-    for offsets, line, color, width in zip(strokes, lines, stroke_colors, stroke_widths):
+    for offsets, line, color, width, alignment in zip(strokes, lines, stroke_colors, stroke_widths, alignments):
 
         if not line:
             initial_coord[1] -= line_height
@@ -30,7 +31,13 @@ def _draw(strokes, lines, filename, stroke_colors=None, stroke_widths=None):
 
         strokes[:, 1] *= -1
         strokes[:, :2] -= strokes[:, :2].min() + initial_coord
-        strokes[:, 0] += (view_width - strokes[:, 0].max()) / 2
+
+        if alignment == 'center':
+            strokes[:, 0] += (view_width - strokes[:, 0].max()) / 2
+        elif alignment == 'left':
+            strokes[:, 0] += 0  # No adjustment needed for left alignment
+        elif alignment == 'right':
+            strokes[:, 0] += view_width - strokes[:, 0].max()
 
         prev_eos = 1.0
         p = "M{},{} ".format(0, 0)
