@@ -9,7 +9,7 @@ def _draw(strokes, lines, filename, stroke_colors=None, stroke_widths=None, alig
     stroke_widths = stroke_widths or [2] * len(lines)
     alignments = alignments or ['center'] * len(lines)
 
-    line_height = 60
+    line_height = 30
     view_width = 1000
     view_height = line_height * (len(strokes) + 1)
 
