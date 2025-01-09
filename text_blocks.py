@@ -39,6 +39,47 @@ TRL = """TRL
 9. Actual system flight proven through successful mission operations
 """
 
+IMPORTANT_MILESTONES = """Important Milestones
+PDR: evaluates preliminary design to ensure it meets requirements
+CDR: assesses mission components if ready for fabrication and integration
+SAR: evaluates the system ready for integration, testing, and deployment
+FRR: evaluates mission hardware, software, and teams if ready for launch
+"""
+
+REQURIREMENTS = """Requirements
+Requirements before analysis, requirements before design!
+Requirements must be changed to always be up to date!
+
+System requirements fall in three main areas
+- Functional (E.g., what should it do?)
+- Operational (E.g., how do I run it, get the data down?)
+- Constraints (E.g., how much can it cost?)
+
+Requirement Evolution
+- Phase A: Define the mission requirements
+- Phase B: Identify critical driving requirements and risks
+- Phase C: Specify system and segment definition and add interface
+- Phase D: Flow down, formal design documentation
+"""
+
+MISSION_ANALYSIS_AND_UTILITY = """Mission Analysis and Mission Utility
+Feasibility Assessment: Determines if the problem is achievable
+Sizing Estimates: fundamental parameters (size, weight, power, cost)
+Point Design: baseline system design wo optimization to demo feasibility
+Utility Analysis: quantitative alignment with mission objectives using 
+performance parameters and measures of effectiveness
+Trade Studies: Impact of key parameters on cost, risk, and performance
+Performance Assessment: Using system algorithms, analogies, or simulations
+"""
+
+SCIENCE_TRACEABILITY_MATRIX = """Science Traceability Matrix
+Structured link from mission objectives to measurable science goals
+Science Goals: Define the broad objectives the mission aims to achieve
+Measurement Requirements: Specify necessary data or obs to fulfill goals
+Instrument Capabilities: Technical specifics that meet measurement needs
+Result: Scientific objectives align with engineering and operational plans
+"""
+
 # Mission Architecture
 
 MISSION_ARCHITECTURE = """Mission Architecture
@@ -120,6 +161,47 @@ Replenishment, EoL-options, deployment for multiple sats, flexibility
 E. Iterate and document
 """
 
+ALTERNATIVE_ARCHITECTURE_AND_CONCEPT = """Mission Concept vs. Architecture
+AA: Selection and combination of fundamental mission elements 
+AMC: how those elements work together (data flow, control, communication)
+
+Focus
+AA: What is used for the mission (hardware, orbit, etc.)
+AMC: How the mission operates (data transmission, task allocation)
+
+Elements
+AA: Payload, bus, launch, orbit, comms, ground system, end-user
+AMC: Data transmission, task allocation and control, comms arch, timeline
+
+Change
+AA: At least one fundamental element is chosen differently 
+AMC: New ways of executing the mission (workflows, automation)
+
+Relationship
+AA: Elements influence the MC; a new C might need a different A
+AMC: The way components interact may require different architecture elem.
+
+Iterative Process
+AA: Development can start from an existing architecture and explore 
+multiple concepts, or vice versa.
+AMC: Same iterative approach
+"""
+
+DART_ALTERNATIVE_ARCHITECTURE = """InSight Alternative Architecture
+Use a smaller, custom-built lander with RTG power instead of solar panels 
+Keep all scientific instruments on the lander deck rather than deploying
+Rely on direct-to-Earth communication (no relay orbiter)
+Landing site closer to potential tectonic activity, higher landing risk
+"""
+
+DART_ALTERNATIVE_MISSION_CONCEPT = """InSIGHT Alternative Mission Concept
+Deploy multiple smaller landers across different locations on Mars
+Each lander has a basic seismometer to triangulate seismic events
+Coordinate data collection via a shared communication protocol
+Use orbit-based measurements
+"""
+
+
 # Space Environment Summaries
 
 SPACE_ENVIRONMENT = """Space Environment Overview
@@ -177,6 +259,25 @@ Growing concern due to increasing space activity.
 Risks: Collisions that generate more debris.
 Mitigation and remediation strategies:
 - Collision avoidance, EoL deorbiting, active debris removal
+"""
+
+VAN_ALLEN_BELTS = """Van Allen Belts
+Regions of trapped high-energy particles:
+Inner Belt: 0.2 to 2 Earth radii, dominated by protons (100s MeV)
+Outer Belt: 3 to 10 Earth radii, with electrons 100 keV to 10 MeV
+Dynamic environments affected by solar activity.
+"""
+
+CHARGING_SHIELDING = """Charging and Shielding
+1. Charging Mechanisms
+Surface Charging: due to plasma interactions or photoelectric currents.
+Deep Charging: Charging due high-energy partl. in spacecraft interior
+2. Effects:
+Electrostatic Discharges (ESDs) can disrupt or damage electronics.
+Differential charging creates localized electric fields, risking arcing.
+3. Shielding Strategies:
+Use of conductive coatings and materials to reduce potentials
+Shielding against low-energy particles, watch out for Bremsstrahlung
 """
 
 # Structure
@@ -268,26 +369,5 @@ Radiators: External panels to radiate energy (optical solar reflectors)
 Active
 Heaters: Electrical resistance elements for generating heat
 Heat Pipes: transfer heat via a two-phase process using capillary action
-"""
-
-# Space Environment
-
-VAN_ALLEN_BELTS = """Van Allen Belts
-Regions of trapped high-energy particles:
-Inner Belt: 0.2 to 2 Earth radii, dominated by protons (100s MeV)
-Outer Belt: 3 to 10 Earth radii, with electrons 100 keV to 10 MeV
-Dynamic environments affected by solar activity.
-"""
-
-CHARGING_SHIELDING = """Charging and Shielding
-1. Charging Mechanisms
-Surface Charging: due to plasma interactions or photoelectric currents.
-Deep Charging: Charging due high-energy partl. in spacecraft interior
-2. Effects:
-Electrostatic Discharges (ESDs) can disrupt or damage electronics.
-Differential charging creates localized electric fields, risking arcing.
-3. Shielding Strategies:
-Use of conductive coatings and materials to reduce potentials
-Shielding against low-energy particles, watch out for Bremsstrahlung
 """
 
