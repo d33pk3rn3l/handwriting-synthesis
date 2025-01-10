@@ -9,3 +9,4 @@ from .space_environment import *
 from .structure import *
 from .thermal import *
 from .orbits import *
+from .comms import *

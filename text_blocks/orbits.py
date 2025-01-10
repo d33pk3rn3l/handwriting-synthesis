@@ -47,7 +47,7 @@ TYPES_OF_ORBITAL_MANEUVERS = """Orbital Maneuvers
 Impulsive Maneuvers: Short-duration firing, fast but propellant-intensive
 Extended Maneuvers: Used with ion engines for sustained adjustments.
 Gravity Assist: Uses gravity to alter trajectory without propellant
-Δv is modified; enables "grand tour" like Cassini's flyby
+delta-v is modified; enables "grand tour" like Cassini's flyby
 Aerobraking: Reduces velocity using atmospheric drag
 Phasing Maneuvers: Adjusts the time-position alignment of a spacecraft
 """

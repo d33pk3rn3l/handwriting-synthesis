@@ -4,6 +4,8 @@ Provides functionality to generate handwritten text using different styles and s
 """
 
 from handwriting_synthesis import Hand
+import importlib
+import sys
 
 # Define your own style, have some variation to look more natural with bias.
 style_dict = {
@@ -76,15 +78,25 @@ def write_text(text, style=None, filename='output.svg', alignment='left'):
 
 # Generate images
 if __name__ == "__main__":
-    from text_blocks import *
-    import inspect
+    # Optional: override default modules with command-line arguments
+    modules_to_synthesize = sys.argv[1:] if len(sys.argv) > 1 else [
+        #"general_things_system_engineering",
+        #"mission_architecture",
+        #"space_environment",
+        #"structure",
+        #"thermal",
+        "orbits",
+        "comms"
+    ]
 
-    text_block_vars = {
-        name: val
-        for name, val in globals().items()
-        if isinstance(val, str) and name.isupper()
-    }
-
-    for block_name, text_content in text_block_vars.items():
-        svg_filename = f"img/export/{block_name.lower()}.svg"
-        write_text(text_content, style_dict, filename=svg_filename)
+    for module_name in modules_to_synthesize:
+        module = importlib.import_module(f"text_blocks.{module_name}")
+        text_block_vars = {
+            name: val
+            for name, val in vars(module).items()
+            if isinstance(val, str) and name.isupper()
+        }
+        for block_name, text_content in text_block_vars.items():
+            prefix = module_name
+            svg_filename = f"img/export/{prefix}_{block_name.lower()}.svg"
+            write_text(text_content, style_dict, filename=svg_filename)
