@@ -78,7 +78,6 @@ def write_text(text, style=None, filename='output.svg', alignment='left'):
 
 # Generate images
 if __name__ == "__main__":
-    # Optional: override default modules with command-line arguments
     modules_to_synthesize = sys.argv[1:] if len(sys.argv) > 1 else [
         #"general_things_system_engineering",
         #"mission_architecture",
@@ -87,8 +86,9 @@ if __name__ == "__main__":
         #"thermal",
         #"orbits",
         #"comms",
-        #"propulsion",
-        "admin"
+        "propulsion",
+        #"admin",
+        "compute"
     ]
 
     for module_name in modules_to_synthesize:
