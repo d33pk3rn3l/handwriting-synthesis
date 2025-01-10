@@ -2,7 +2,7 @@ COMMUNICATION_TOPOLOGIES = """Communication Topologies
 Data Relay: European Data Relay System (EDRS) with 2 GEO satellites
 Uses mainly laser terminals, one with RF capability. Lacks global coverage
 Direct-to-Earth: High-bandwidth data transfer from LEO.
-Feederlinks: High-bandwidth data transfer to remote areas via GEO. (TV)
+Feederlinks: High-bandwidth data transfer to remote areas via GEO (TV)
 """
 
 RF_COMMUNICATION = """RF Communication
@@ -15,7 +15,7 @@ Requires maintaining a signal-to-noise ratio for communication.
 OPTICAL_COMMUNICATION = """Optical Communication
 Weather dependent and requires dedicated laser terminals
 Provides high bandwidth (100s Gbps) and is undergoing standardization
-Operates at ~200 THz frequency range (mostly around 1550nm)
+Operates at 200 THz frequency range (mostly around 1550nm)
 System specifications: heavier (10s of kg to 150kg) with also 50W
 Optical SNR is affected by atmospheric conditions and pointing accuracy
 """
@@ -39,7 +39,7 @@ Example: BPSK (Binary Phase Shift Keying) or QPSK (Quadrature PSK)
 ERROR_CORRECTION_TECHNIQUES = """Error Correction Techniques
 Forward Error Correction (FEC)
 Encodes additional bits (checksum) for data verification and correction
-error code rate: r = bits_payload / (bits_payload + #bits_redundancy)
+error code rate: bits payload / (bits payload p bits redundancy)
 Backward Error Correction (BEC): Uses NACKing, two-way comm
 Interleaving: Mixes consecutive data chunks with added redundancy.
 Allows reconstruction of original data in case of local errors.

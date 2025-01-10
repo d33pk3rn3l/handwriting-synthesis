@@ -85,8 +85,10 @@ if __name__ == "__main__":
         #"space_environment",
         #"structure",
         #"thermal",
-        "orbits",
-        "comms"
+        #"orbits",
+        #"comms",
+        #"propulsion",
+        "admin"
     ]
 
     for module_name in modules_to_synthesize:
