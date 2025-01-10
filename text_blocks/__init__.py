@@ -13,3 +13,4 @@ from .comms import *
 from .admin import *
 from .propulsion import *
 from .compute import *
+from .sustainability import *
