@@ -38,11 +38,10 @@ Example: BPSK (Binary Phase Shift Keying) or QPSK (Quadrature PSK)
 
 ERROR_CORRECTION_TECHNIQUES = """Error Correction Techniques
 Forward Error Correction (FEC)
-Encodes additional bits (checksum) for data verification and error correction at the receiver.
+Encodes additional bits (checksum) for data verification and correction
 error code rate: r = bits_payload / (bits_payload + #bits_redundancy)
 Backward Error Correction (BEC): Uses NACKing, two-way comm
 Interleaving: Mixes consecutive data chunks with added redundancy.
 Allows reconstruction of original data in case of local errors.
 Increases latency and requires more memory.
 """
-
