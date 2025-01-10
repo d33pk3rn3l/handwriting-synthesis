@@ -76,12 +76,15 @@ def write_text(text, style=None, filename='output.svg', alignment='left'):
 
 # Generate images
 if __name__ == "__main__":
-    from text_blocks import TEST, STEPS, TRL, MISSION_ARCHITECTURE, COMMON_ALTERNATIVES_MISSION_ELEMENTS, FIRESAT_MISSION_CONCEPT_ELEMENTS, DEFINE_MISSION_CONCEPT, SPACE_ENVIRONMENT
-    #write_text(STEPS, style_dict, filename='img/export/steps.svg')
-    #write_text(TRL, style_dict, filename='img/export/trl.svg')
-    #write_text(MISSION_ARCHITECTURE, style_dict, filename='img/export/mission_architecture.svg')
-    #write_text(COMMON_ALTERNATIVES_MISSION_ELEMENTS, style_dict, filename='img/export/common_alternatives_mission_elements.svg')
-    #write_text(FIRESAT_MISSION_CONCEPT_ELEMENTS, style_dict, filename='img/export/firesat_mission_concept_elements.svg')
-    #write_text(DEFINE_MISSION_CONCEPT, style_dict, filename='img/export/define_mission_concept.svg')
-    #write_text(SPACE_ENVIRONMENT, style_dict, filename='img/export/space_environment.svg')
-    write_text(TEST, style_dict, filename='img/export/test.svg')
+    from text_blocks import *
+    import inspect
+
+    text_block_vars = {
+        name: val
+        for name, val in globals().items()
+        if isinstance(val, str) and name.isupper()
+    }
+
+    for block_name, text_content in text_block_vars.items():
+        svg_filename = f"img/export/{block_name.lower()}.svg"
+        write_text(text_content, style_dict, filename=svg_filename)
