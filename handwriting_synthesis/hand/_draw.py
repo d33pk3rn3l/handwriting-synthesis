@@ -15,7 +15,7 @@ def _draw(strokes, lines, filename, stroke_colors=None, stroke_widths=None, alig
 
     dwg = svgwrite.Drawing(filename=filename)
     dwg.viewbox(width=view_width, height=view_height)
-    dwg.add(dwg.rect(insert=(0, 0), size=(view_width, view_height), fill='white'))
+    # dwg.add(dwg.rect(insert=(0, 0), size=(view_width, view_height), fill='white'))
 
     initial_coord = np.array([0, -(3 * line_height / 4)])
     for offsets, line, color, width, alignment in zip(strokes, lines, stroke_colors, stroke_widths, alignments):

@@ -1,3 +1,4 @@
+
 """
 This module contains text blocks used for handwriting synthesis.
 """
@@ -80,7 +81,9 @@ Instrument Capabilities: Technical specifics that meet measurement needs
 Result: Scientific objectives align with engineering and operational plans
 """
 
-# Mission Architecture
+"""
+Mission Architecture and Concept Blocks
+"""
 
 MISSION_ARCHITECTURE = """Mission Architecture
 1. Subject: Observing or interacting with passive or active subjects
@@ -140,8 +143,6 @@ MISSION OPERATIONS
 2. Autonomy level: Full ground command n control, partial, full onboard
 """
 
-# Mission Concept
-
 FIRESAT_MISSION_CONCEPT_ELEMENTS = """FS Mission Concept Elements
 1. Data Delivery: How imagery collected, identified, and transmitted
 2. Tasking, Scheduling, and Control: What, when, and how to image
@@ -152,12 +153,10 @@ FIRESAT_MISSION_CONCEPT_ELEMENTS = """FS Mission Concept Elements
 DEFINE_MISSION_CONCEPT = """Define Mission Concept
 A. Define data delivery and housekeeping data:
 Space vs. ground processing, level of autonomy, central vs. distributed
-
 B. Define tasking, scheduling, and control: LoA, central vs. distributed
 C. Define comms architecture: Data rates, bandwidth, timeliness
 D. Define preliminary program timeline: 
 Replenishment, EoL-options, deployment for multiple sats, flexibility
-
 E. Iterate and document
 """
 
@@ -200,7 +199,6 @@ Each lander has a basic seismometer to triangulate seismic events
 Coordinate data collection via a shared communication protocol
 Use orbit-based measurements
 """
-
 
 # Space Environment Summaries
 
@@ -283,7 +281,7 @@ Shielding against low-energy particles, watch out for Bremsstrahlung
 # Structure
 
 STRUCTURE_REQUIREMENTS = """Structure reqs
-- Mission reqs: Mission life, orbit & Payload specifications
+- Mission reqs: Mission life, orbit and Payload specifications
 - System reqs: Satellite bus, propulsion, avionics, deplorables
 - Structural Subsystem reqs: loads, materials, alignment, mass, CoG
 
@@ -354,8 +352,7 @@ RADIANT_ENERGY = """Radiant Energy
 - Albedo: Reflected solar energy from a planet.
 - Planetary Infrared Energy: Infrared radiation from a planet.
 - Radiated Energy: Heat emitted from the spacecraft into space.
-
-—> Earth reflects 25-55 percent of the incident solar energy
+Earth reflects 25-55 percent of the incident solar energy
 """
 
 THERMAL_CONTROL = """Thermal Control
@@ -370,4 +367,3 @@ Active
 Heaters: Electrical resistance elements for generating heat
 Heat Pipes: transfer heat via a two-phase process using capillary action
 """
-
