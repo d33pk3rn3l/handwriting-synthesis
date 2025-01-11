@@ -25,16 +25,16 @@ Primary: Main load path to launch vehicle, stiff and strong
 (sat bus, launch vehicle adapter)
 Secondary: Mounting for payloads, solar arrays, antennas. 
 Sub-structures in orbit (appendage booms, support trusses)
-Tertiary: monolithic, stiff, posit. stability, sensitive to vibration.
+Tertiary: monolithic, stiff, posit. stability, sensitive to vibration
 (brackets, component housings)
 """
 
 STRUCTURE_DESIGN_PROCESS = """Structure Design Process
-1. Initial Configuration: Conceptual design, system-level.
-2. Preliminary Design: Trade studies, material selection.
-3. Detailed Analysis: Sizing components, creating drawings.
-4. Production: Manufacturing and supply chain.
-5. Testing: Qualification, acceptance, and workmanship tests.
+1. Initial Configuration: Conceptual design, system-level
+2. Preliminary Design: Trade studies, material selection
+3. Detailed Analysis: Sizing components, creating drawings
+4. Production: Manufacturing and supply chain
+5. Testing: Qualification, acceptance, and workmanship tests
 """
 
 MATERIALS_REQUIREMENTS = """Materials reqs
@@ -47,11 +47,11 @@ Env. Resistance: Outgassing, Radiation resistance, Corrosion resistance
 """
 
 STRUCTURE_TESTING = """Structure Testing
-Static Load Testing: Applying loads to measure structural response.
-Modal Survey: Sine sweep tests to find natural frequencies and damping.
-Acoustic Testing: Simulating launch noise in a reverberant chamber.
-Random Vibration Testing: Using a shaker to simulate random vibrations.
-Shock Testing: Simulating pyrotechnic shocks.
+Static Load Testing: Applying loads to measure structural response
+Modal Survey: Sine sweep tests to find natural frequencies and damping
+Acoustic Testing: Simulating launch noise in a reverberant chamber
+Random Vibration Testing: Using a shaker to simulate random vibrations
+Shock Testing: Simulating pyrotechnic shocks
 """
 
 COMMON_MATERIALS = """Common Materials

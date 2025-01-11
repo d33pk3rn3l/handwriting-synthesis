@@ -41,6 +41,7 @@ def sanitize_line(line):
             .replace("“", "")
             .replace("”", "")
             .replace("/", ";")
+            .replace("&", "n")
     )
     for char in line:
         if char not in VALID_CHARS:
@@ -76,6 +77,22 @@ def write_text(text, style=None, filename='output.svg', alignment='left'):
         alignments=alignments  # Pass alignments to the write method
     )
 
+def check_valid_chars(text_block):
+    """
+    Check if a text block contains only valid characters for handwriting synthesis.
+
+    Parameters:
+    text_block (str): The text block to be checked.
+
+    Returns:
+    bool: True if all characters are valid, False otherwise.
+    char: The first invalid character found.
+    """
+    for char in text_block:
+        if char not in VALID_CHARS:
+            return False, char
+    return True, None
+
 # Generate images
 if __name__ == "__main__":
     modules_to_synthesize = sys.argv[1:] if len(sys.argv) > 1 else [
@@ -89,7 +106,14 @@ if __name__ == "__main__":
         #"propulsion",
         #"admin",
         #"compute",
-        "sustainability"
+        #"sustainability",
+        #"payload_optical",
+        #"earth_observation",
+        #"mait",
+        #"project_management",
+        #"launch_vehicles",
+        #"ground_operations",
+        "launch_operations"
     ]
 
     for module_name in modules_to_synthesize:
@@ -99,6 +123,7 @@ if __name__ == "__main__":
             for name, val in vars(module).items()
             if isinstance(val, str) and name.isupper()
         }
+
         for block_name, text_content in text_block_vars.items():
             prefix = module_name
             svg_filename = f"img/export/{prefix}_{block_name.lower()}.svg"

@@ -14,3 +14,7 @@ from .admin import *
 from .propulsion import *
 from .compute import *
 from .sustainability import *
+from .payload_optical import *
+from .earth_observation import *
+from .mait import *
+from .project_management import *
